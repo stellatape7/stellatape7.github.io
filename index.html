@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stella Hadjineophytou</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Gotu|Open+Sans|Reenie+Beanie&display=swap" rel="stylesheet">
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+  </head>
+  <body>
+    <div class="site" ng-app="main" ng-controller="mainController">
+      <div class="header-wrapper">
+        <div class="header">
+          <div class="logo-wrapper">
+            <h1>Stella Hadjineophytou</h1>
+            <h2>PROFESSIONAL MUSICIAN AND TEACHER</h2>
+          </div>
+          <div class="navWrapper">
+            <ul>
+              <li class="home"><a href="#about">About</a></li>
+              <li class="home"><a href="#teaching">Teaching</a></li>
+              <li class="home"><a href="#media">Media</a></li>
+              <li class="home"><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="reviews-wrapper">
+
+            <a class="prev carousel-nav" onclick="plusSlides(-1)"><h3>&#60;</h3></a>
+
+            <div class="review-container" ng-repeat="review in reviews">
+              <div class="review-body">
+                <h4>{{review.desc}}</h4>
+              </div>
+            </div>
+
+            <a class="next carousel-nav" onclick="plusSlides(1)"><h3>&#62;</h3></a>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="content-wrapper">
+        <div class="content">
+
+          <h3 id="about">About</h3>
+
+          <p>
+            Originally from London, Stella Hadjineophytou is a professional organist, pianist, violinist and private music teacher living in the North East of England.
+          </p>
+
+          <p>
+            Stella studied violin with Lorraine McAslan and piano with Graham Caskie at the Junior Department of the Royal Academy of Music in London for eight years.
+            In 2017 Stella graduated from Emmanuel College, Cambridge with a Bachelor of Arts in Music. During her time at Emmanuel College she also held the prestigious position of Organ Scholar for three years and studied organ performance with Stephen Farr.
+            Stella directed, accompanied and toured with the Chapel Choir of Emmanuel College, Cambridge, conducting performances in the UK, Germany, Denmark and Sweden. During this period she founded and conducted the Abelian Ensemble.
+          </p>
+
+          <p>
+            In 2017 Stella took up the position of Director of Music at St Matthias and St Luke Anglican Church in Vancouver, Canada. It was here that she established herself as a choral conductor and freelance organist.
+            During her tenure as Director of Music, she created a new music programme for St Matthias and St Luke by creating a community choir, outreach music programmes and setting up a concert series.
+            As a freelance performer Stella has had the pleasure of accompanying Howard Williams and the Choir of the 21st Century in a concert of motets by J.S. Bach and has enjoyed giving solo performances in Copenhagen Cathedral and Malmö Cathedral.
+            Stella regularly gives solo recitals around the UK on organ, piano and violin and plays for exams, weddings and funerals.
+          </p>
+
+          <p>
+            Stella is currently studying for a Masters in Music Therapy with Nordoff Robbins at Goldsmiths College, University of London.
+            Stella's experience in community music-making and therapy work with marginalised communities and those with life-limiting illnesses and disabilities has afforded her unique skills as an improviser and community musician.
+          </p>
+
+          <div class="separator">
+            <hr>
+          </div>
+
+          <h3 id="teaching">Teaching</h3>
+
+          <p>
+            As a qualified violin, piano, organ and music theory teacher, Stella has taught over 40 private music students between the ages of 4 and 70 in the past two years alone and has a wealth of teaching expertise in both performance and academic music.
+            Ranging in ability from beginner to advanced, all of Stella’s pupils make fast progress and are encouraged not only to become specialists in their chosen instrument but to develop into well-rounded musicians.
+          </p>
+
+          <p>
+            Stella’s teaching style is professional yet friendly and engaging. Music is treated as something to explore and enjoy, and all work is student-centred. Students are able to choose which areas they would like to develop, such as following a grade-based system or focusing on a particular genre of music.
+            The objectives of learning are to create a complete musical skill set, developing musical sensitivity alongside solid technique.
+          </p>
+
+          <p>
+            Stella carries an enhanced DBS certificate and annually completes a safeguarding training course. A free consultation lesson is available for those wishing to meet and try a beginner lesson. Stella is currently accepting all ages and ability levels for tuition.
+          </p>
+
+          <p>
+            Lesson rates are as follows:
+              <ul>
+                <li>30 minutes: £15</li>
+                <li>45 minutes: £20</li>
+                <li>60 minutes: £25</li>
+              </ul>
+          </p>
+
+          <div class="separator">
+            <hr>
+          </div>
+
+          <h3 id="media">Media</h3>
+
+            <div class="gallery-wrapper image" ng-repeat="image in gallery">
+              <div class="gallery">
+                <a target="_blank" href="{{image.img}}">
+                  <img src="{{image.img}}" alt="">
+                </a>
+              </div>
+            </div>
+
+            <!-- <div class="gallery-wrapper video">
+              <div class="gallery">
+                <video controls>
+                  <source src="img/video.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div> -->
+
+          <div class="clearfix"></div>
+
+          <div class="separator">
+            <hr>
+          </div>
+
+          <h3 id="contact">Contact</h3>
+
+          <p style="text-align: left;">To get in touch with Stella for private music tuition, freelance services and other general queries please email <a id="email" href="mailto:contact@stellahadjineophytou.co.uk">contact@stellahadjineophytou.co.uk</a></p>
+        </div>
+      </div>
+
+      <div class="footer-wrapper">
+        <div id="copyright">
+          <p class="centre-text">© 2020 Stella Hadjineophytou</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+
+  </body>
+</html>
